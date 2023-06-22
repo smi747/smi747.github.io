@@ -1,0 +1,73 @@
+.photos {
+  @include flex(column, center, null);
+
+  &__list {
+    display: grid;
+
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1860px;
+
+    @include tablet {
+      gap: 20px;
+    }
+    @include mobile {
+      gap: 10px;
+      margin-bottom: 18px;
+      max-width: 318px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &_gap {
+      @include mobile {
+        gap: 18px;
+      }
+    }
+    &_small {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include mobile {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &_big {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+      @include tablet {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      @include mobile {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+  &__card {
+    object-fit: cover;
+    max-width: 100%;
+
+    height: 301px;
+    border-radius: 50px;
+
+    @include mobile {
+      height: 110px;
+      border-radius: 20px;
+    }
+    &_hidden-m {
+      @include tablet {
+        display: none;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    &_hidden-s {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

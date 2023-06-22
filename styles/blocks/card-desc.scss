@@ -1,0 +1,47 @@
+.card-desc {
+  width: 554px;
+  @include font(
+    $font-size-pnormal,
+    $font-weight-regular,
+    $font-lineheight-xxl,
+    normal
+  );
+
+  @include mobile {
+    width: 263px;
+    @include font(
+      $font-size-pnormal-mobile,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+  }
+  &__ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: -3px 0 0 14px;
+    line-height: 128%;
+
+    @include mobile {
+      margin: 0 0 0 9px;
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__li {
+    position: relative;
+
+    &::marker {
+      font-size: 0.7em;
+    }
+  }
+  &__li-p {
+    position: absolute;
+    top: 3px;
+    left: 16px;
+  }
+}

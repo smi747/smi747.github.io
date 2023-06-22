@@ -1,0 +1,29 @@
+.desc {
+  width: 418px;
+  margin-bottom: 100px;
+
+  color: $clr-gray300;
+  text-align: center;
+  @include font(
+    $font-size-pnormal,
+    $font-weight-regular,
+    $font-lineheight-xxl,
+    normal
+  );
+
+  @include mobile {
+    width: 318px;
+    margin-bottom: 50px;
+    @include font(
+      $font-size-pnormal-mobile,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+  }
+  &_form {
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+}

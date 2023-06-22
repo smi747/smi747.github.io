@@ -1,0 +1,27 @@
+.tours {
+  @include flex(column, center, null);
+
+  &__title {
+    margin-bottom: 35px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    @include flex(null, null, center);
+    flex-wrap: wrap;
+
+    @include desktop {
+      width: 1170px;
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 18px;
+    }
+    @include mobile {
+      min-width: 318px;
+      gap: 18px;
+    }
+  }
+}

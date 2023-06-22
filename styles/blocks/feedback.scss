@@ -1,0 +1,22 @@
+.feedback {
+  @include flex(column, center, null);
+
+  &__list {
+    display: flex;
+
+    @include desktop {
+      width: 1170px;
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+    }
+  }
+}

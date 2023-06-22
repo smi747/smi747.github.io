@@ -1,0 +1,98 @@
+.form {
+  @include flex(column, center, null);
+
+  &__fields {
+    display: grid;
+    background-color: $clr-white;
+    max-width: 1170px;
+    width: 100%;
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      gap: 33px 30px;
+      padding: 70px;
+      border-radius: 50px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 33px 20px;
+      padding: 60px;
+      border-radius: 50px;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding: 20px 20px 40px;
+      gap: 30px;
+      border-radius: 30px;
+    }
+  }
+  &__submit-section {
+    @include desktop {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @include tablet {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    display: flex;
+    gap: 30px;
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+  &__button {
+    padding: 15px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include mobile {
+      padding: 12px 0;
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+
+    &_heavy {
+      padding: 15px 70.5px;
+      background-color: $clr-green400;
+      color: $clr-white;
+
+      @include mobile {
+        padding: 12px 29.5px;
+      }
+      &:hover {
+        background-color: $clr-green300;
+      }
+      &:active {
+        background-color: $clr-green200;
+      }
+    }
+    &_light {
+      padding: 15px 72.5px;
+      background-color: $clr-green100;
+      color: $clr-green400;
+
+      @include mobile {
+        padding: 12px 31px;
+      }
+      &:hover {
+        background-color: $clr-gray100;
+      }
+      &:active {
+        background-color: $clr-gray200;
+      }
+    }
+  }
+}

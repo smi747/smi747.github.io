@@ -1,0 +1,69 @@
+.cardfooter {
+  @include flex(null, baseline, space-between);
+
+  &__arrow {
+    width: 22px;
+  }
+  &__socials {
+    pointer-events: all;
+    display: flex;
+    gap: 35px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+  &__link {
+    color: $clr-white;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    &:active {
+      color: $clr-orange200;
+      text-decoration-color: currentColor;
+    }
+  }
+  &__more {
+    display: flex;
+    gap: 16px;
+    color: $clr-white;
+    @include font(
+      $font-size-pbig,
+      $font-weight-bold,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pbig-mobile,
+        $font-weight-bold,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+}
+
+//Фон для "Подробнее" при наведении на карточку с туром
+.cardfooter__more {
+  .stories-card__pictureblock:hover ~ .stories-card__info & {
+    background-color: $clr-green400;
+    border-radius: 50px;
+    padding: 7px 20px;
+    margin: 0 0 -7px -20px;
+    transition: background-color 0.3s ease;
+  }
+  .stories-card__pictureblock:active ~ .stories-card__info & {
+    background-color: $clr-orange200;
+    border-radius: 50px;
+    padding: 7px 20px;
+    margin: 0 0 -7px -20px;
+    transition: none;
+  }
+}
+//-------------------------------------------------------------

@@ -1,0 +1,93 @@
+.feedback-element {
+  display: flex;
+  width: 570px;
+  justify-content: space-between;
+  flex-direction: column;
+  background: $clr-beige200;
+
+  padding: 40px;
+  border-radius: 50px;
+  gap: 70px;
+
+  @include tablet {
+    width: 450px;
+  }
+  @include mobile {
+    padding: 20px;
+    border-radius: 20px;
+    gap: 40px;
+    width: 318px;
+  }
+
+  &__text {
+    font-style: normal;
+    color: $clr-black;
+    @include font(
+      $font-size-pbig,
+      $font-weight-bold,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pbig-mobile,
+        $font-weight-bold,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__foot {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: end;
+    }
+  }
+  &__sub {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__author {
+    color: $clr-black;
+    @include font(
+      $font-size-h3,
+      $font-weight-medium,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-h3-mobile,
+        $font-weight-bold,
+        $font-lineheight-m,
+        $font-letterspacing-large
+      );
+    }
+  }
+  &__tour {
+    color: $clr-gray300;
+    @include font(
+      $font-size-psmall,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      $font-letterspacing-small
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-psmall-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        $font-letterspacing-small
+      );
+    }
+  }
+  &__picture {
+    border-radius: 100px;
+  }
+}

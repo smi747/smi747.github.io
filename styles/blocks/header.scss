@@ -1,0 +1,160 @@
+.header {
+  @include flex(column, center, null);
+  height: $header-height;
+
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    background-image: url("../images/header_section/header-background.jpg");
+  }
+  @include tablet {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 39.9%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/header_section/header-background-small.jpg);
+  }
+  @include mobile {
+    height: $header-height-nobile;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 39.9%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/header_section/header-background-small.jpg);
+  }
+
+  &__space {
+    display: none;
+    height: 88px;
+    margin-bottom: 119px;
+
+    @include mobile {
+      margin-bottom: 52px;
+    }
+  }
+  &__top {
+    @include flex(null, null, center);
+    width: 100%;
+    top: -88px;
+    transition: top 1s;
+  }
+  &__nav {
+    margin-bottom: 119px;
+  }
+  &__title {
+    width: 768px;
+    margin-bottom: 50px;
+    text-align: center;
+    @include font(
+      $font-size-h1,
+      $font-weight-bold,
+      $font-lineheight-xs,
+      $font-letterspacing-medium
+    );
+
+    @include mobile {
+      width: 360px;
+      margin-bottom: 40px;
+      @include font(
+        $font-size-h1-mobile,
+        $font-weight-bold,
+        $font-lineheight-s,
+        $font-letterspacing-medium
+      );
+    }
+  }
+  &__text {
+    margin-bottom: 50px;
+    text-align: center;
+    width: 562px;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include tablet {
+      width: 442px;
+    }
+    @include mobile {
+      width: 310px;
+      margin-bottom: 40px;
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__button {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: $clr-white;
+    color: $clr-black;
+    @include font(
+      $font-size-psmall,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      $font-letterspacing-small
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-psmall-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        $font-letterspacing-small
+      );
+    }
+
+    &:hover {
+      background-color: $clr-orange200;
+      color: $clr-white;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    &:active {
+      background-color: $clr-orange100;
+      color: $clr-black;
+      transition: none;
+    }
+  }
+}
+
+//Скрытое меню
+.header__top_show {
+  position: fixed;
+  top: 0;
+  background: rgba(243, 239, 232, 0.6);
+  backdrop-filter: blur(27px);
+  z-index: 100;
+  padding: 0 57px;
+  @include mobile {
+    padding: 0 20px;
+  }
+
+  .header__nav {
+    margin-bottom: 0;
+    color: $clr-black;
+  }
+  .navigation__link {
+    color: $clr-black;
+  }
+  .navigation__link:hover {
+    text-decoration-color: currentColor;
+  }
+  .navigation__logo {
+    filter: invert(1);
+  }
+  .navigation__phone {
+    color: $clr-black;
+  }
+}
+//-------------------

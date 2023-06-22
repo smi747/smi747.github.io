@@ -1,0 +1,20 @@
+.stories {
+  @include flex(column, center, null);
+
+  &__list {
+    @include flex(column, center, null);
+
+    @include desktop {
+      width: 1170px;
+      gap: 50px;
+    }
+    @include tablet {
+      max-width: 918px;
+      gap: 50px;
+    }
+    @include mobile {
+      min-width: 318px;
+      gap: 20px;
+    }
+  }
+}

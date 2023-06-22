@@ -1,0 +1,288 @@
+.field {
+  &_big {
+    @include desktop {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @include tablet {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+  &__agreedwrap {
+    display: flex;
+  }
+  &__label {
+    display: flex;
+
+    color: $clr-black;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 68px;
+    padding: 19px;
+    background: $clr-beige100;
+    border: 1px solid $clr-beige200;
+    border-radius: 10px;
+    margin-top: 8px;
+
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include mobile {
+      padding: 9px;
+      height: 43px;
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+
+    &:hover {
+      background-color: $clr-beige200;
+    }
+    &:focus {
+      background-color: $clr-beige200;
+      border: 1px solid $clr-gray300;
+    }
+    &::placeholder {
+      color: $clr-gray300;
+      @include font(
+        $font-size-pnormal,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+
+      @include mobile {
+        @include font(
+          $font-size-pnormal-mobile,
+          $font-weight-regular,
+          $font-lineheight-xxl,
+          normal
+        );
+      }
+    }
+    &_where {
+      color: $clr-gray300;
+      appearance: none;
+      background-image: url("../images/svg_elements/arrow_down.svg");
+      background-repeat: no-repeat;
+      background-position: right 24px top 50%;
+
+      //Сброс цвета в поле выбора направления
+      @include hasCheckedOption() {
+        color: $clr-black;
+      }
+      @include mobile {
+        padding: 10.5px 9px;
+        height: 46px;
+        background-position: right 14px top 50%;
+      }
+    }
+    &_area {
+      height: 152px;
+      resize: none;
+      vertical-align: top;
+
+      @include mobile {
+        height: 132px;
+      }
+    }
+  }
+  &__option {
+    color: $clr-black;
+  }
+  &__radio {
+    display: flex;
+    gap: 31px;
+
+    margin-top: 8px;
+  }
+  &__radiocircle {
+    width: 26px;
+    height: 26px;
+    vertical-align: top;
+    margin: 0 11px 0 0;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__license {
+    text-decoration: underline 1px;
+    text-decoration-color: transparent;
+    color: $clr-black;
+
+    &:hover {
+      text-decoration-color: currentColor;
+      transition: text-decoration-color 0.3s ease-out;
+    }
+    &:active {
+      color: $clr-green400;
+      text-decoration-color: currentColor;
+    }
+  }
+  &__agreed {
+    color: $clr-gray300;
+    @include desktop {
+      @include font(
+        $font-size-psmall,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        $font-letterspacing-small
+      );
+    }
+    @include tablet {
+      @include font(
+        $font-size-psmall,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        $font-letterspacing-small
+      );
+    }
+    @include mobile {
+      @include font(
+        $font-size-psmall-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__checkbox {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    vertical-align: top;
+    margin: 0;
+
+    @include desktop {
+      margin-right: 19px;
+    }
+    @include tablet {
+      margin-right: 11px;
+    }
+    @include mobile {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+//custom radio
+.field__radiocircle {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  & + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+
+    margin-right: 11px;
+
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
+  & + label::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../images/svg_elements/radio.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+  }
+  &:checked + label::before {
+    background-size: 26px 26px, auto;
+    background-position: center center, center center;
+    background-image: url("../images/svg_elements/radio.svg"),
+      url("../images/svg_elements/circle.svg");
+
+    @include mobile {
+      background-image: url("../images/svg_elements/radio.svg"),
+        url("../images/svg_elements/circle.svg");
+      background-size: 20px 20px, 9.23px 9.23px;
+    }
+  }
+}
+//----------------------------------------------------------
+
+//custom checkbox
+.field__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  & + label {
+    display: inline-flex;
+    user-select: none;
+    margin-right: 19px;
+
+    @include tablet {
+      margin-right: 11px;
+    }
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
+  & + label::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../images/svg_elements/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+  }
+  &:checked + label::before {
+    background-size: 26px 26px, auto;
+    background-position: center center, center center;
+    background-image: url("../images/svg_elements/checkbox.svg"),
+      url("../images/svg_elements/checked.svg");
+
+    @include mobile {
+      background-image: url("../images/svg_elements/checkbox.svg"),
+        url("../images/svg_elements/checked_small.svg");
+      background-size: 20px 20px, auto;
+    }
+  }
+}
+//----------------------------------------------------------

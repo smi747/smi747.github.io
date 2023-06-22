@@ -1,0 +1,54 @@
+.tours-menu {
+  @include flex(null, null, center);
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 106px;
+
+  @include mobile {
+    margin-bottom: 50px;
+    gap: 10px;
+  }
+
+  &__link {
+    color: $clr-black;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    @include font(
+      $font-size-pbig,
+      $font-weight-bold,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pbig-mobile,
+        $font-weight-bold,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+    &:hover {
+      text-decoration: underline 2px;
+      text-underline-offset: 10px;
+
+      @include mobile {
+        text-underline-offset: 3px;
+      }
+    }
+    &:active {
+      text-decoration-color: currentColor;
+      color: $clr-orange200;
+    }
+    &_active {
+      text-decoration: underline 2px;
+      text-underline-offset: 10px;
+      color: $clr-orange200;
+      @include mobile {
+        text-underline-offset: 3px;
+      }
+    }
+  }
+}

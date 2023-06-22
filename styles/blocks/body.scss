@@ -1,0 +1,57 @@
+.body {
+  font-family: $primary-font-family;
+  font-style: $primary-font-style;
+  color: $clr-white;
+  background-color: $clr-beige100;
+  min-width: 360px;
+
+  &__header {
+    padding: 0 $header-sidepadding;
+
+    @include mobile {
+      padding: 0 $header-sidepadding-mobile;
+    }
+  }
+  &__tours {
+    padding: $tours-toppadding $tours-sidepadding 0;
+    @include mobile {
+      padding: $tours-toppadding-mobile $tours-sidepadding-mobile 0;
+    }
+  }
+  &__form {
+    padding: $form-toppadding $form-sidepadding 0;
+
+    @include mobile {
+      padding: $form-toppadding-mobile $form-sidepadding-mobile 0;
+    }
+  }
+  &__feedback {
+    padding: $feedback-toppadding $feedback-sidepadding 0;
+
+    @include mobile {
+      padding: $feedback-toppadding-mobile $feedback-sidepadding-mobile 0;
+    }
+  }
+  &__unifiedblock {
+    padding: $unifiedblock-toppadding $unifiedblock-sidepadding 0;
+
+    @include tablet {
+      padding: $unifiedblock-toppadding-tablet $unifiedblock-sidepadding-tablet
+        0;
+    }
+
+    @include mobile {
+      padding: $unifiedblock-toppadding-mobile $unifiedblock-sidepadding-mobile
+        0;
+    }
+  }
+  &__footer {
+    margin-top: $footer-topmargin;
+    padding: 30px $form-sidepadding;
+
+    @include mobile {
+      padding: 21px 0;
+      margin-top: $footer-topmargin-mobile;
+    }
+  }
+}

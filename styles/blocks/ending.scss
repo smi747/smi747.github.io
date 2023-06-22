@@ -1,0 +1,86 @@
+.ending {
+  @include flex(null, center, center);
+  gap: 30px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+  &__pictureblock {
+    @include flex(null, center, center);
+    overflow: hidden;
+
+    border-radius: 50px;
+    @include mobile {
+      border-radius: 20px;
+      width: 130px;
+      height: 133px;
+    }
+  }
+  &__picture {
+    height: 100%;
+    object-fit: cover;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 371px;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+  &__header {
+    color: $clr-black;
+    @include font(
+      $font-size-h3,
+      $font-weight-medium,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      width: 291px;
+      text-align: center;
+      @include font(
+        $font-size-h3-mobile,
+        $font-weight-bold,
+        $font-lineheight-m,
+        $font-letterspacing-large
+      );
+    }
+  }
+  &__text {
+    color: $clr-gray300;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include mobile {
+      text-align: center;
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__mail {
+    text-decoration: underline 1px;
+    text-decoration-color: transparent;
+    color: $clr-black;
+
+    &:hover {
+      transition: text-decoration-color 0.3s ease-out;
+      text-decoration-color: currentColor;
+    }
+    &:active {
+      color: $clr-green400;
+      text-decoration-color: currentColor;
+    }
+  }
+}

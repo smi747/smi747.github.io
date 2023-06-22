@@ -1,0 +1,119 @@
+.tours-card {
+  position: relative;
+  width: 370px;
+  height: 531px;
+
+  @include tablet {
+    width: 450px;
+  }
+  @include mobile {
+    width: 318px;
+    height: 318px;
+  }
+
+  &__picture {
+    transition: transform 0.3s ease;
+    width: 100%;
+
+    .tours-card:hover & {
+      transform: scale(1.2);
+    }
+  }
+  &__pictureblock {
+    &::after {
+      background: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.06) 48.44%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      pointer-events: none;
+    }
+  }
+  &__info {
+    @include flex(column, null, start);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: $clr-white;
+
+    padding: 50px;
+    @include mobile {
+      padding: 25px;
+    }
+  }
+  &__name {
+    @include font(
+      $font-size-h3,
+      $font-weight-medium,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-h3-mobile,
+        $font-weight-bold,
+        $font-lineheight-m,
+        0.04em
+      );
+    }
+  }
+  &__price {
+    margin-top: 16px;
+    @include font(
+      $font-size-psmall,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      $font-letterspacing-small
+    );
+
+    @include mobile {
+      margin-top: 13px;
+      @include font(
+        $font-size-psmall-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        $font-letterspacing-small
+      );
+    }
+  }
+  &__more {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+    align-self: flex-start;
+    @include font(
+      $font-size-pbig,
+      $font-weight-bold,
+      $font-lineheight-l,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pbig-mobile,
+        $font-weight-bold,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+
+    .tours-card:hover & {
+      background-color: $clr-green400;
+      border-radius: 50px;
+      padding: 7px 20px;
+      margin: auto 0 -7px -20px;
+      transition: background-color 0.3s ease;
+    }
+    .tours-card:active & {
+      background-color: $clr-orange200;
+      border-radius: 50px;
+      padding: 7px 20px;
+      margin: auto 0 -7px -20px;
+      transition: none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin flex($flexdir, $align, $justify) {
+  display: flex;
+  flex-direction: $flexdir;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin hasCheckedOption() {
+  &:has(option:checked:not(:disabled)) {
+    @content;
+  }
+}
+
+@mixin font($fs, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

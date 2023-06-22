@@ -1,0 +1,109 @@
+.footer {
+  background-color: $clr-beige200;
+
+  &__block {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1168px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+    }
+  }
+  &__text {
+    color: $clr-gray300;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 25px;
+
+    @include mobile {
+      gap: 15px;
+    }
+  }
+  &__social-elem {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+
+    @include mobile {
+      gap: 6.54px;
+      align-items: center;
+    }
+    &_fb {
+      gap: 15px;
+
+      @include mobile {
+        gap: 8.85px;
+      }
+    }
+  }
+  &__social-ico {
+    &_vk {
+      margin-left: 4px;
+      width: 20px;
+      height: 12px;
+
+      @include mobile {
+        width: 15.38px;
+        height: 9.23px;
+      }
+    }
+    &_fb {
+      margin-left: 13px;
+      width: 8px;
+      height: 17px;
+
+      @include mobile {
+        width: 6.15px;
+        height: 13.08px;
+      }
+    }
+    &_inst {
+      margin-left: 10px;
+      width: 14px;
+      height: 14px;
+
+      @include mobile {
+        width: 10.77px;
+        height: 10.77px;
+      }
+    }
+  }
+  &__social-name {
+    color: $clr-black;
+    @include font(
+      $font-size-pnormal,
+      $font-weight-regular,
+      $font-lineheight-xxl,
+      normal
+    );
+
+    @include mobile {
+      @include font(
+        $font-size-pnormal-mobile,
+        $font-weight-regular,
+        $font-lineheight-xxl,
+        normal
+      );
+    }
+  }
+}

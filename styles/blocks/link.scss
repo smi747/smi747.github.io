@@ -1,0 +1,10 @@
+.link {
+  text-decoration: underline 1px;
+  text-underline-offset: 6px;
+  text-decoration-color: transparent;
+
+  &:hover {
+    text-decoration-color: currentColor;
+    transition: text-decoration-color 0.3s ease-out;
+  }
+}

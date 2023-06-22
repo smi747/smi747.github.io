@@ -1,0 +1,35 @@
+@import "reset";
+@import "media";
+@import "vars";
+@import "mixins";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@import "blocks/body";
+@import "blocks/header";
+@import "blocks/navigation";
+@import "blocks/link";
+@import "blocks/title";
+@import "blocks/tours";
+@import "blocks/tours-menu";
+@import "blocks/tours-card";
+@import "blocks/pictureblock";
+@import "blocks/form";
+@import "blocks/desc";
+@import "blocks/field";
+@import "blocks/feedback";
+@import "blocks/feedback-element";
+@import "blocks/photos";
+@import "blocks/stories";
+@import "blocks/stories-card";
+@import "blocks/card-desc";
+@import "blocks/cardfooter";
+@import "blocks/ending";
+@import "blocks/footer";
