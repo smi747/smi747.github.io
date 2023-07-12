@@ -21,7 +21,9 @@
     }
   }
   &__picture {
-    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
     transition: transform 0.3s ease;
     object-fit: cover;
     .stories-card:hover & {

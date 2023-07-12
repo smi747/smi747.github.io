@@ -13,23 +13,23 @@
     }
   }
   &__tours {
-    padding: $tours-toppadding $tours-sidepadding 0;
+    padding: $blocktype_1-toppadding $blocktype_1-sidepadding 0;
     @include mobile {
-      padding: $tours-toppadding-mobile $tours-sidepadding-mobile 0;
+      padding: $blocktype_1-toppadding-mobile $blocktype_1-sidepadding-mobile 0;
     }
   }
   &__form {
-    padding: $form-toppadding $form-sidepadding 0;
+    padding: $blocktype_1-toppadding $blocktype_1-sidepadding 0;
 
     @include mobile {
-      padding: $form-toppadding-mobile $form-sidepadding-mobile 0;
+      padding: $blocktype_1-toppadding-mobile $blocktype_1-sidepadding-mobile 0;
     }
   }
   &__feedback {
-    padding: $feedback-toppadding $feedback-sidepadding 0;
+    padding: $blocktype_1-toppadding $blocktype_1-sidepadding 0;
 
     @include mobile {
-      padding: $feedback-toppadding-mobile $feedback-sidepadding-mobile 0;
+      padding: $blocktype_1-toppadding-mobile $blocktype_1-sidepadding-mobile 0;
     }
   }
   &__unifiedblock {
@@ -47,7 +47,7 @@
   }
   &__footer {
     margin-top: $footer-topmargin;
-    padding: 30px $form-sidepadding;
+    padding: 30px $footer-sidepadding;
 
     @include mobile {
       padding: 21px 0;

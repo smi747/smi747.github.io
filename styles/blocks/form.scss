@@ -47,6 +47,7 @@
     border-radius: 10px;
     border: none;
     outline: none;
+    cursor: pointer;
     @include font(
       $font-size-pnormal,
       $font-weight-regular,

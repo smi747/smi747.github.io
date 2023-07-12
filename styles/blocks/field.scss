@@ -204,6 +204,7 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
+    cursor: pointer;
 
     margin-right: 11px;
 
@@ -250,6 +251,8 @@
     display: inline-flex;
     user-select: none;
     margin-right: 19px;
+
+    cursor: pointer;
 
     @include tablet {
       margin-right: 11px;

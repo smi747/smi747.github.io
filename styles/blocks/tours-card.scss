@@ -13,7 +13,9 @@
 
   &__picture {
     transition: transform 0.3s ease;
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 
     .tours-card:hover & {
       transform: scale(1.2);

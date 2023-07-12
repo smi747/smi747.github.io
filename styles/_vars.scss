@@ -48,20 +48,12 @@ $header-height-nobile: 488px;
 $header-sidepadding: 57px;
 $header-sidepadding-mobile: 20px;
 
-$tours-toppadding: 135px;
-$tours-sidepadding: 53px;
-$tours-toppadding-mobile: 75px;
-$tours-sidepadding-mobile: 21px;
-
-$form-toppadding: 135px;
-$form-sidepadding: 53px;
-$form-toppadding-mobile: 75px;
-$form-sidepadding-mobile: 21px;
-
-$feedback-toppadding: 135px;
-$feedback-sidepadding: 53px;
-$feedback-toppadding-mobile: 75px;
-$feedback-sidepadding-mobile: 21px;
+//these variables are used in tours, form, feedback blocks
+$blocktype_1-toppadding: 135px;
+$blocktype_1-sidepadding: 53px;
+$blocktype_1-toppadding-mobile: 75px;
+$blocktype_1-sidepadding-mobile: 21px;
+//------------------------------------
 
 $unifiedblock-toppadding: 135px;
 $unifiedblock-sidepadding: 29px;
@@ -72,4 +64,4 @@ $unifiedblock-sidepadding-mobile: 21px;
 
 $footer-topmargin: 135px;
 $footer-topmargin-mobile: 75px;
-$form-sidepadding: 53px;
+$footer-sidepadding: 53px;

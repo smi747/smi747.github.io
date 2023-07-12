@@ -1,5 +1,5 @@
 .cardfooter {
-  @include flex(null, baseline, space-between);
+  @include flex(row-reverse, baseline, space-between);
 
   &__arrow {
     width: 22px;
@@ -51,7 +51,8 @@
 
 //Фон для "Подробнее" при наведении на карточку с туром
 .cardfooter__more {
-  .stories-card__pictureblock:hover ~ .stories-card__info & {
+  .stories-card__pictureblock:hover ~ .stories-card__info &,
+  .cardfooter__socials:hover + & {
     background-color: $clr-green400;
     border-radius: 50px;
     padding: 7px 20px;

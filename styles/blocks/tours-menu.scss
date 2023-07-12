@@ -15,6 +15,7 @@
     outline: none;
     background: transparent;
     padding: 0;
+    cursor: pointer;
     @include font(
       $font-size-pbig,
       $font-weight-bold,
