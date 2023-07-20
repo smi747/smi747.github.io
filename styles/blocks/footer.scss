@@ -2,10 +2,11 @@
   background-color: $clr-beige200;
 
   &__block {
+    max-width: 1168px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
-    max-width: 1168px;
 
     @include mobile {
       flex-direction: column;
@@ -15,6 +16,7 @@
   }
   &__text {
     color: $clr-gray300;
+
     @include font(
       $font-size-pnormal,
       $font-weight-regular,
@@ -24,7 +26,7 @@
 
     @include mobile {
       @include font(
-        $font-size-pnormal-mobile,
+        $font-size-p-mobile,
         $font-weight-regular,
         $font-lineheight-xxl,
         normal
@@ -59,6 +61,7 @@
   &__social-ico {
     &_vk {
       margin-left: 4px;
+
       width: 20px;
       height: 12px;
 
@@ -69,6 +72,7 @@
     }
     &_fb {
       margin-left: 13px;
+
       width: 8px;
       height: 17px;
 
@@ -90,6 +94,7 @@
   }
   &__social-name {
     color: $clr-black;
+
     @include font(
       $font-size-pnormal,
       $font-weight-regular,
@@ -99,7 +104,7 @@
 
     @include mobile {
       @include font(
-        $font-size-pnormal-mobile,
+        $font-size-p-mobile,
         $font-weight-regular,
         $font-lineheight-xxl,
         normal

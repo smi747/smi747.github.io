@@ -2,26 +2,30 @@
   @include flex(column, center, null);
 
   &__fields {
-    display: grid;
-    background-color: $clr-white;
     max-width: 1170px;
     width: 100%;
 
+    display: grid;
+    background-color: $clr-white;
+
     @include desktop {
+      padding: 70px;
+
       grid-template-columns: 1fr 1fr;
       gap: 33px 30px;
-      padding: 70px;
       border-radius: 50px;
     }
     @include tablet {
+      padding: 60px;
+
       grid-template-columns: 1fr 1fr;
       gap: 33px 20px;
-      padding: 60px;
       border-radius: 50px;
     }
     @include mobile {
+      padding: 20px 20px 46px;
+
       grid-template-columns: 1fr;
-      padding: 20px 20px 40px;
       gap: 30px;
       border-radius: 30px;
     }
@@ -44,10 +48,12 @@
   }
   &__button {
     padding: 15px 0;
-    border-radius: 10px;
+
     border: none;
+    border-radius: 10px;
     outline: none;
     cursor: pointer;
+
     @include font(
       $font-size-pnormal,
       $font-weight-regular,
@@ -57,8 +63,9 @@
 
     @include mobile {
       padding: 12px 0;
+
       @include font(
-        $font-size-pnormal-mobile,
+        $font-size-p-mobile,
         $font-weight-regular,
         $font-lineheight-xxl,
         normal
@@ -67,6 +74,7 @@
 
     &_heavy {
       padding: 15px 70.5px;
+
       background-color: $clr-green400;
       color: $clr-white;
 
@@ -82,6 +90,7 @@
     }
     &_light {
       padding: 15px 73px;
+
       background-color: $clr-green100;
       color: $clr-green400;
 

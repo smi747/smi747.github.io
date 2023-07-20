@@ -18,15 +18,11 @@ $primary-font-style: normal;
 $font-size-h1: 96px;
 $font-size-h2: 59px;
 $font-size-h3: 35px;
-$font-size-h1-mobile: 34px;
-$font-size-h2-mobile: 34px;
-$font-size-h3-mobile: 23px;
+$font-size-h1-2-mobile: 34px;
 $font-size-pbig: 23px;
 $font-size-pnormal: 20px;
 $font-size-psmall: 17px;
-$font-size-pbig-mobile: 16px;
-$font-size-pnormal-mobile: 16px;
-$font-size-psmall-mobile: 16px;
+$font-size-p-mobile: 16px;
 
 $font-weight-bold: 700;
 $font-weight-medium: 500;
@@ -43,25 +39,16 @@ $font-letterspacing-large: 0.04em;
 $font-letterspacing-medium: 0.02em;
 $font-letterspacing-small: -0.01em;
 
+$unifiedblock-toppadding: 135px;
+$unifiedblock-sidepadding: 29px;
+$unifiedblock-sidepadding-tablet: 20px;
+$unifiedblock-toppadding-mobile: 75px;
+$unifiedblock-sidepadding-mobile: 21px;
+
 $header-height: 831px;
 $header-height-nobile: 488px;
 $header-sidepadding: 57px;
 $header-sidepadding-mobile: 20px;
 
-//these variables are used in tours, form, feedback blocks
-$blocktype_1-toppadding: 135px;
+//these variable is used in tours, form, feedback and footer blocks
 $blocktype_1-sidepadding: 53px;
-$blocktype_1-toppadding-mobile: 75px;
-$blocktype_1-sidepadding-mobile: 21px;
-//------------------------------------
-
-$unifiedblock-toppadding: 135px;
-$unifiedblock-sidepadding: 29px;
-$unifiedblock-toppadding-tablet: 135px;
-$unifiedblock-sidepadding-tablet: 20px;
-$unifiedblock-toppadding-mobile: 75px;
-$unifiedblock-sidepadding-mobile: 21px;
-
-$footer-topmargin: 135px;
-$footer-topmargin-mobile: 75px;
-$footer-sidepadding: 53px;

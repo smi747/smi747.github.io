@@ -1,6 +1,7 @@
 .header {
-  @include flex(column, center, null);
   height: $header-height;
+
+  @include flex(column, center, null);
 
   background-position: top center;
   background-size: cover;
@@ -30,18 +31,20 @@
   }
 
   &__space {
-    display: none;
-    height: 88px;
     margin-bottom: 119px;
+
+    height: 88px;
+    display: none;
 
     @include mobile {
       margin-bottom: 52px;
     }
   }
   &__top {
-    @include flex(null, null, center);
-    width: 100%;
     top: -88px;
+    width: 100%;
+
+    @include flex(null, null, center);
     transition: top 1s;
   }
   &__nav {
@@ -50,7 +53,9 @@
   &__title {
     width: 768px;
     margin-bottom: 50px;
+
     text-align: center;
+
     @include font(
       $font-size-h1,
       $font-weight-bold,
@@ -61,8 +66,9 @@
     @include mobile {
       width: 360px;
       margin-bottom: 40px;
+
       @include font(
-        $font-size-h1-mobile,
+        $font-size-h1-2-mobile,
         $font-weight-bold,
         $font-lineheight-s,
         $font-letterspacing-medium
@@ -71,8 +77,10 @@
   }
   &__text {
     margin-bottom: 50px;
-    text-align: center;
     width: 562px;
+
+    text-align: center;
+
     @include font(
       $font-size-pnormal,
       $font-weight-regular,
@@ -86,8 +94,9 @@
     @include mobile {
       width: 310px;
       margin-bottom: 40px;
+
       @include font(
-        $font-size-pnormal-mobile,
+        $font-size-p-mobile,
         $font-weight-regular,
         $font-lineheight-xxl,
         normal
@@ -96,9 +105,11 @@
   }
   &__button {
     padding: 5px 20px;
+
     border-radius: 10px;
     background-color: $clr-white;
     color: $clr-black;
+
     @include font(
       $font-size-psmall,
       $font-weight-regular,
@@ -108,7 +119,7 @@
 
     @include mobile {
       @include font(
-        $font-size-psmall-mobile,
+        $font-size-p-mobile,
         $font-weight-regular,
         $font-lineheight-xxl,
         $font-letterspacing-small
@@ -132,10 +143,13 @@
 .header__top_show {
   position: fixed;
   top: 0;
+  z-index: 100;
+
+  padding: 0 57px;
+
   background: rgba(243, 239, 232, 0.6);
   backdrop-filter: blur(27px);
-  z-index: 100;
-  padding: 0 57px;
+
   @include mobile {
     padding: 0 20px;
   }

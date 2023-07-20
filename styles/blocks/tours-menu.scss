@@ -1,8 +1,9 @@
 .tours-menu {
+  margin-bottom: 106px;
+
   @include flex(null, null, center);
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 106px;
 
   @include mobile {
     margin-bottom: 50px;
@@ -10,12 +11,14 @@
   }
 
   &__link {
-    color: $clr-black;
+    padding: 0;
+
     border: none;
+    color: $clr-black;
     outline: none;
     background: transparent;
-    padding: 0;
     cursor: pointer;
+
     @include font(
       $font-size-pbig,
       $font-weight-bold,
@@ -25,7 +28,7 @@
 
     @include mobile {
       @include font(
-        $font-size-pbig-mobile,
+        $font-size-p-mobile,
         $font-weight-bold,
         $font-lineheight-xxl,
         normal

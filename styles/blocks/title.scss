@@ -1,11 +1,12 @@
 .title {
   color: $clr-black;
   text-align: center;
+
   @include font($font-size-h2, $font-weight-bold, $font-lineheight-xl, normal);
 
   @include mobile {
     @include font(
-      $font-size-h2-mobile,
+      $font-size-h1-2-mobile,
       $font-weight-bold,
       $font-lineheight-s,
       $font-letterspacing-medium

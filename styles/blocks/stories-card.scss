@@ -1,8 +1,9 @@
 .stories-card {
-  display: block;
-  position: relative;
   width: 1170px;
   height: 567px;
+
+  display: block;
+  position: relative;
 
   @include tablet {
     width: 100%;
@@ -21,11 +22,13 @@
     }
   }
   &__picture {
-    object-fit: cover;
     min-width: 100%;
     min-height: 100%;
+
+    object-fit: cover;
     transition: transform 0.3s ease;
     object-fit: cover;
+
     .stories-card:hover & {
       transform: scale(1.2);
     }
@@ -38,16 +41,18 @@
     }
   }
   &__info {
-    @include flex(column, null, start);
-    pointer-events: none;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    padding: 60px;
+
+    height: 100%;
     width: 100%;
+
+    @include flex(column, null, start);
+    pointer-events: none;
     color: $clr-white;
 
-    padding: 60px;
     @include mobile {
       padding: 30px;
     }
@@ -65,8 +70,9 @@
 
     @include mobile {
       width: 140px;
+
       @include font(
-        $font-size-h3-mobile,
+        $font-size-pbig,
         $font-weight-bold,
         $font-lineheight-m,
         $font-letterspacing-large
